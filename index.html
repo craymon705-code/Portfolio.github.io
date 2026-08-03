@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,9 +20,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f9ff;
-color:#222;
-line-height:1.7;
+background:#050816;
+color:#f1f5f9;
 }
 
 nav{
@@ -29,222 +29,331 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:white;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
+background:rgba(8,12,28,.92);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.05);
 z-index:1000;
 }
 
 .logo{
 font-size:28px;
 font-weight:700;
-color:#2563eb;
+letter-spacing:1px;
+color:#4ea8ff;
 }
 
 nav ul{
 display:flex;
-gap:25px;
 list-style:none;
+gap:30px;
 }
 
 nav ul li a{
 text-decoration:none;
-color:#222;
+color:#e5e7eb;
 font-weight:500;
 transition:.3s;
 }
 
 nav ul li a:hover{
-color:#2563eb;
+color:#4ea8ff;
 }
 
 .hero{
-padding-top:150px;
-padding-bottom:90px;
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:140px 8% 80px;
+
+}
+
+.hero-box{
+
+display:grid;
+grid-template-columns:330px 1fr;
+gap:60px;
+align-items:center;
+max-width:1200px;
+width:100%;
+
+}
+
+.profile{
+
 text-align:center;
-background:linear-gradient(180deg,#ffffff,#eef5ff);
+
 }
 
-.profile-pic{
-width:180px;
-height:180px;
-border-radius:50%;
+.profile img{
+
+width:260px;
+height:260px;
 object-fit:cover;
+border-radius:50%;
 border:6px solid #2563eb;
-box-shadow:0 10px 30px rgba(37,99,235,.25);
-margin-bottom:25px;
+box-shadow:0 0 35px rgba(37,99,235,.35);
+
 }
 
-.hero h1{
-font-size:60px;
-color:#111827;
-margin-bottom:10px;
+.profile h2{
+
+margin-top:20px;
+font-size:34px;
+
 }
 
-.hero h3{
-font-size:24px;
-font-weight:500;
-color:#2563eb;
-margin-bottom:20px;
+.profile p{
+
+color:#9fb3d9;
+margin-top:8px;
+
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
+.intro h4{
+
 font-size:18px;
-color:#555;
+letter-spacing:3px;
+color:#60a5fa;
+
 }
 
-.btn{
+.intro h1{
+
+font-size:64px;
+line-height:1.1;
+margin:15px 0;
+
+}
+
+.intro span{
+
+color:#60a5fa;
+
+}
+
+.intro p{
+
+font-size:18px;
+line-height:1.9;
+color:#cbd5e1;
+max-width:700px;
+margin-top:20px;
+
+}
+
+.button{
+
 display:inline-block;
 margin-top:35px;
-padding:14px 35px;
+padding:15px 38px;
 background:#2563eb;
+border-radius:40px;
 color:white;
 text-decoration:none;
-border-radius:40px;
 font-weight:600;
-transition:.3s;
+transition:.35s;
+
 }
 
-.btn:hover{
+.button:hover{
+
 background:#1d4ed8;
-transform:translateY(-4px);
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(37,99,235,.45);
+
 }
 
 section{
-padding:90px 10%;
+
+padding:100px 8%;
+
 }
 
 .title{
+
+font-size:42px;
 text-align:center;
-font-size:38px;
-color:#2563eb;
-margin-bottom:45px;
+margin-bottom:50px;
+color:#60a5fa;
+
 }
 
-.about-card{
-background:white;
-padding:35px;
-border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+.about{
+
+background:#0f172a;
+padding:40px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.05);
+box-shadow:0 10px 40px rgba(0,0,0,.35);
+
 }
 
-.about-card h3{
-margin-bottom:15px;
-font-size:28px;
-color:#111827;
-}
+.about p{
 
-.about-card p{
-color:#555;
+line-height:2;
 font-size:17px;
+color:#d6dce6;
+
 }
 
-.expertise-grid{
+.cards{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:25px;
-}
+  .skill-card{
 
-.skill-card{
-background:white;
-border-radius:18px;
-box-shadow:0 5px 18px rgba(0,0,0,.08);
-cursor:pointer;
-transition:.3s;
+background:#111c34;
+border:1px solid rgba(96,165,250,.12);
+border-radius:20px;
 overflow:hidden;
+transition:.35s;
+cursor:pointer;
+
 }
 
 .skill-card:hover{
-transform:translateY(-6px);
+
+transform:translateY(-8px);
+border-color:#60a5fa;
+box-shadow:0 15px 35px rgba(37,99,235,.25);
+
 }
 
-.skill-header{
-padding:25px;
+.skill-head{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-font-size:20px;
-font-weight:600;
-color:#2563eb;
+padding:25px;
+
 }
 
-.skill-content{
+.skill-head h3{
+
+font-size:22px;
+color:#60a5fa;
+
+}
+
+.plus{
+
+font-size:28px;
+transition:.35s;
+
+}
+
+.skill-body{
+
 max-height:0;
 overflow:hidden;
-transition:.4s;
+transition:.45s;
 padding:0 25px;
-color:#555;
+
 }
 
-.skill-card.active .skill-content{
-max-height:250px;
+.skill-card.active .skill-body{
+
+max-height:260px;
 padding:0 25px 25px;
+
 }
 
-.contact-grid{
+.skill-card.active .plus{
+
+transform:rotate(45deg);
+
+}
+
+.contact{
+
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+gap:25px;
+
 }
 
 .contact-card{
-background:white;
-padding:25px;
-border-radius:18px;
-box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+background:#0f172a;
+padding:30px;
+border-radius:20px;
 text-align:center;
+border:1px solid rgba(255,255,255,.05);
+transition:.35s;
+
 }
 
-.contact-card h4{
-color:#2563eb;
-margin-bottom:10px;
+.contact-card:hover{
+
+transform:translateY(-8px);
+border-color:#60a5fa;
+
+}
+
+.contact-card h3{
+
+color:#60a5fa;
+margin-bottom:12px;
+
 }
 
 footer{
-background:#2563eb;
-color:white;
+
+padding:30px;
 text-align:center;
-padding:20px;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,.05);
 margin-top:60px;
+
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.hero-box{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.intro h1{
+
+font-size:46px;
+
+}
+
+.profile img{
+
+width:200px;
+height:200px;
+
+}
 
 nav{
+
 flex-direction:column;
 gap:10px;
+
 }
 
 nav ul{
+
 flex-wrap:wrap;
 justify-content:center;
-}
 
-.hero h1{
-font-size:42px;
-}
-
-.hero h3{
-font-size:20px;
-}
-
-.profile-pic{
-width:150px;
-height:150px;
-}
-
-.title{
-font-size:30px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -266,19 +375,35 @@ font-size:30px;
 
 <section class="hero" id="home">
 
-<img src="picture.png" class="profile-pic" alt="Profile Picture">
+<div class="hero-box">
 
-<h1>Your Name</h1>
+<div class="profile">
 
-<h3>Photographer • Gamer • Stylist • Editor</h3>
+<img src="picture.png" alt="Profile Picture">
+
+<h2>Your Name</h2>
+
+<p>Grade 12 Student</p>
+
+</div>
+
+<div class="intro">
+
+<h4>WELCOME</h4>
+
+<h1>Creative <span>Portfolio</span></h1>
 
 <p>
 
-Welcome to my creative portfolio. I enjoy expressing ideas through photography, digital editing, gaming, and styling. Every project helps me improve my creativity, communication, and attention to detail.
+Hello! I'm <b>Your Name</b> from <b>Your School</b>. I enjoy transforming ideas into creative work through photography, editing, styling, and gaming. My goal is to continuously improve my creativity while producing projects that are clean, engaging, and meaningful.
 
 </p>
 
-<a href="#about" class="btn">Explore Portfolio</a>
+<a href="#expertise" class="button">View My Work</a>
+
+</div>
+
+</div>
 
 </section>
 
@@ -286,13 +411,11 @@ Welcome to my creative portfolio. I enjoy expressing ideas through photography, 
 
 <h2 class="title">About Me</h2>
 
-<div class="about-card">
-
-<h3>Hello!</h3>
+<div class="about">
 
 <p>
 
-I'm <b>Your Name</b>, a Grade 12 student from <b>Your School</b>. I enjoy creating meaningful visual content through photography and editing while exploring gaming and styling as creative hobbies. I believe creativity, dedication, and continuous learning help me grow both personally and professionally.
+I am passionate about visual storytelling and digital creativity. Whether capturing photographs, editing videos, styling outfits, or exploring games, I enjoy learning new techniques that help me grow as a creative individual. I value dedication, teamwork, and attention to detail in every project I create.
 
 </p>
 
@@ -304,18 +427,24 @@ I'm <b>Your Name</b>, a Grade 12 student from <b>Your School</b>. I enjoy creati
 
 <h2 class="title">Creative Expertise</h2>
 
-<div class="expertise-grid">
-  <div class="skill-card">
+<div class="cards">
 
-<div class="skill-header">
-<span>📷 Photographer</span>
-<span>+</span>
+<div class="skill-card">
+
+<div class="skill-head">
+
+<h3>📷 Photographer</h3>
+
+<div class="plus">+</div>
+
 </div>
 
-<div class="skill-content">
+<div class="skill-body">
 
 <p>
-I enjoy capturing portraits, school events, landscapes, and everyday moments through creative composition and lighting. Photography allows me to tell stories and preserve memorable experiences through images.
+
+I enjoy capturing portraits, school activities, landscapes, and memorable moments while focusing on composition, lighting, and storytelling.
+
 </p>
 
 </div>
@@ -324,15 +453,41 @@ I enjoy capturing portraits, school events, landscapes, and everyday moments thr
 
 <div class="skill-card">
 
-<div class="skill-header">
-<span>🎮 Gaming</span>
-<span>+</span>
+<div class="skill-head">
+
+<h3>🎬 Editing</h3>
+
+<div class="plus">+</div>
+
 </div>
 
-<div class="skill-content">
+<div class="skill-body">
 
 <p>
-Gaming has helped me develop teamwork, communication, strategic thinking, adaptability, and problem-solving while enjoying different genres and online communities.
+
+I create videos, edit photos, design thumbnails, and organize visual content using editing software to produce polished and engaging results.
+
+</p>
+
+</div>
+
+</div>
+<div class="skill-card">
+
+<div class="skill-head">
+
+<h3>🎮 Gaming</h3>
+
+<div class="plus">+</div>
+
+</div>
+
+<div class="skill-body">
+
+<p>
+
+Gaming has strengthened my teamwork, communication, strategic thinking, adaptability, and problem-solving skills. I enjoy both competitive and casual games while learning from every experience.
+
 </p>
 
 </div>
@@ -341,32 +496,20 @@ Gaming has helped me develop teamwork, communication, strategic thinking, adapta
 
 <div class="skill-card">
 
-<div class="skill-header">
-<span>👕 Styling</span>
-<span>+</span>
+<div class="skill-head">
+
+<h3>👕 Styling</h3>
+
+<div class="plus">+</div>
+
 </div>
 
-<div class="skill-content">
+<div class="skill-body">
 
 <p>
-I enjoy matching colors, coordinating outfits, and creating clean, simple styles that express personality and confidence while keeping up with current fashion trends.
-</p>
 
-</div>
+I enjoy creating clean outfit combinations, matching colors, and expressing creativity through fashion. Styling allows me to showcase personality while paying attention to detail.
 
-</div>
-
-<div class="skill-card">
-
-<div class="skill-header">
-<span>🎬 Editing</span>
-<span>+</span>
-</div>
-
-<div class="skill-content">
-
-<p>
-I create photo edits, gaming videos, thumbnails, and social media content using editing software. I focus on producing clean, engaging, and visually appealing designs.
 </p>
 
 </div>
@@ -381,56 +524,69 @@ I create photo edits, gaming videos, thumbnails, and social media content using 
 
 <h2 class="title">Contact</h2>
 
-<div class="contact-grid">
+<div class="contact">
 
 <div class="contact-card">
-<h4>👤 Name</h4>
+
+<h3>👤 Name</h3>
+
 <p>Your Name</p>
+
 </div>
 
 <div class="contact-card">
-<h4>🏫 School</h4>
+
+<h3>🏫 School</h3>
+
 <p>Your School</p>
+
 </div>
 
 <div class="contact-card">
-<h4>📧 Email</h4>
+
+<h3>📧 Email</h3>
+
 <p>your@email.com</p>
+
 </div>
 
 <div class="contact-card">
-<h4>📱 Phone</h4>
+
+<h3>📱 Phone</h3>
+
 <p>+63 912 345 6789</p>
+
 </div>
 
 </div>
 
 </section>
+
 <footer>
 
-© 2026 Your Name | Creative Portfolio
+<p>© 2026 Your Name | Creative Portfolio</p>
 
 </footer>
 
 <script>
 
-const cards=document.querySelectorAll(".skill-card");
+const cards = document.querySelectorAll(".skill-card");
 
 cards.forEach(card=>{
 
 card.addEventListener("click",()=>{
 
-if(card.classList.contains("active")){
+cards.forEach(other=>{
 
-card.classList.remove("active");
+if(other!==card){
 
-}else{
-
-cards.forEach(c=>c.classList.remove("active"));
-
-card.classList.add("active");
+other.classList.remove("active");
 
 }
+
+});
+
+card.classList.toggle("active");
 
 });
 
@@ -439,4 +595,5 @@ card.classList.add("active");
 </script>
 
 </body>
+
 </html>
