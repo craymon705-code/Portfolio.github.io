@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Your Name | Portfolio</title>
+<title>Your Name | Creative Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,100 +19,198 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f4f6f9;
-color:#333;
+background:#f5f9ff;
+color:#222;
+line-height:1.7;
 }
 
 nav{
-background:#4F46E5;
-padding:15px 8%;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
 }
 
-nav h2{
-color:white;
+.logo{
+font-size:28px;
+font-weight:700;
+color:#2563eb;
 }
 
 nav ul{
 display:flex;
+gap:25px;
 list-style:none;
-gap:20px;
 }
 
 nav ul li a{
-color:white;
 text-decoration:none;
+color:#222;
 font-weight:500;
+transition:.3s;
 }
 
-header{
+nav ul li a:hover{
+color:#2563eb;
+}
+
+.hero{
+padding-top:150px;
+padding-bottom:90px;
 text-align:center;
-padding:60px 20px;
-background:#6366F1;
-color:white;
+background:linear-gradient(180deg,#ffffff,#eef5ff);
 }
 
-header img{
-width:170px;
-height:170px;
+.profile-pic{
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid white;
+border:6px solid #2563eb;
+box-shadow:0 10px 30px rgba(37,99,235,.25);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:60px;
+color:#111827;
+margin-bottom:10px;
+}
+
+.hero h3{
+font-size:24px;
+font-weight:500;
+color:#2563eb;
 margin-bottom:20px;
 }
 
-header h1{
-font-size:42px;
-}
-
-header h3{
-font-weight:400;
-margin:10px 0 20px;
-}
-
-header p{
+.hero p{
 max-width:700px;
 margin:auto;
-line-height:1.8;
+font-size:18px;
+color:#555;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:14px 35px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+transform:translateY(-4px);
 }
 
 section{
-padding:60px 10%;
+padding:90px 10%;
 }
 
 .title{
 text-align:center;
-margin-bottom:30px;
-font-size:34px;
-color:#4F46E5;
+font-size:38px;
+color:#2563eb;
+margin-bottom:45px;
 }
 
-.card{
+.about-card{
 background:white;
-padding:25px;
-border-radius:12px;
-margin-bottom:25px;
-box-shadow:0 5px 12px rgba(0,0,0,.1);
+padding:35px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.grid{
+.about-card h3{
+margin-bottom:15px;
+font-size:28px;
+color:#111827;
+}
+
+.about-card p{
+color:#555;
+font-size:17px;
+}
+
+.expertise-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-card{
+background:white;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.3s;
+overflow:hidden;
+}
+
+.skill-card:hover{
+transform:translateY(-6px);
+}
+
+.skill-header{
+padding:25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:20px;
+font-weight:600;
+color:#2563eb;
+}
+
+.skill-content{
+max-height:0;
+overflow:hidden;
+transition:.4s;
+padding:0 25px;
+color:#555;
+}
+
+.skill-card.active .skill-content{
+max-height:250px;
+padding:0 25px 25px;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.card ul{
-padding-left:20px;
-line-height:1.8;
+.contact-card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.contact-card h4{
+color:#2563eb;
+margin-bottom:10px;
 }
 
 footer{
+background:#2563eb;
+color:white;
 text-align:center;
 padding:20px;
-background:#4F46E5;
-color:white;
+margin-top:60px;
 }
 
 @media(max-width:768px){
@@ -127,54 +225,74 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-header h1{
-font-size:32px;
+.hero h1{
+font-size:42px;
+}
+
+.hero h3{
+font-size:20px;
+}
+
+.profile-pic{
+width:150px;
+height:150px;
+}
+
+.title{
+font-size:30px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
 
-<h2>Portfolio</h2>
+<div class="logo">Portfolio</div>
 
 <ul>
+
+<li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
-<li><a href="#specialties">Specialties</a></li>
-<li><a href="#skills">Skills</a></li>
+<li><a href="#expertise">Expertise</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
 
-<header>
+<section class="hero" id="home">
 
-<img src="picture.png" alt="Profile Picture">
+<img src="picture.png" class="profile-pic" alt="Profile Picture">
 
 <h1>Your Name</h1>
 
 <h3>Photographer • Gamer • Stylist • Editor</h3>
 
 <p>
-Welcome to my portfolio! I enjoy expressing creativity through photography, gaming, styling, and digital editing. I am always eager to learn new skills and improve my work.
+
+Welcome to my creative portfolio. I enjoy expressing ideas through photography, digital editing, gaming, and styling. Every project helps me improve my creativity, communication, and attention to detail.
+
 </p>
 
-</header>
+<a href="#about" class="btn">Explore Portfolio</a>
+
+</section>
 
 <section id="about">
 
 <h2 class="title">About Me</h2>
 
-<div class="card">
+<div class="about-card">
+
+<h3>Hello!</h3>
 
 <p>
 
-Hello! I'm <b>Your Name</b>, a Grade 12 student from <b>Your School</b>. I enjoy exploring creative fields that allow me to express ideas through photography, gaming, styling, and editing. I value creativity, teamwork, and continuous learning, and I strive to improve my skills through practice and experience.
+I'm <b>Your Name</b>, a Grade 12 student from <b>Your School</b>. I enjoy creating meaningful visual content through photography and editing while exploring gaming and styling as creative hobbies. I believe creativity, dedication, and continuous learning help me grow both personally and professionally.
 
 </p>
 
@@ -182,104 +300,77 @@ Hello! I'm <b>Your Name</b>, a Grade 12 student from <b>Your School</b>. I enjoy
 
 </section>
 
-<section id="specialties">
+<section id="expertise">
 
-<h2 class="title">Specialties</h2>
+<h2 class="title">Creative Expertise</h2>
 
-<div class="grid">
+<div class="expertise-grid">
+  <div class="skill-card">
 
-<div class="card">
-
-<h3>📷 Photographer</h3>
-
-<p>
-Capturing portraits, events, and creative moments with attention to lighting, composition, and storytelling.
-</p>
-
+<div class="skill-header">
+<span>📷 Photographer</span>
+<span>+</span>
 </div>
 
-<div class="card">
-
-<h3>🎮 Gaming</h3>
+<div class="skill-content">
 
 <p>
-Passionate about gaming, teamwork, strategy, and exploring different genres while continuously improving skills.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>👕 Styling</h3>
-
-<p>
-Creating stylish outfit combinations with attention to color coordination, fashion trends, and personal expression.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎬 Editing</h3>
-
-<p>
-Editing photos and videos, creating thumbnails, and producing visually appealing digital content.
+I enjoy capturing portraits, school events, landscapes, and everyday moments through creative composition and lighting. Photography allows me to tell stories and preserve memorable experiences through images.
 </p>
 
 </div>
 
 </div>
 
-</section>
+<div class="skill-card">
 
-<section id="skills">
-
-<h2 class="title">Skills</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Photography Skills</h3>
-<ul>
-<li>Photo Composition</li>
-<li>Camera Handling</li>
-<li>Lighting Techniques</li>
-<li>Portrait Photography</li>
-<li>Creativity</li>
-</ul>
+<div class="skill-header">
+<span>🎮 Gaming</span>
+<span>+</span>
 </div>
 
-<div class="card">
-<h3>Gaming Skills</h3>
-<ul>
-<li>Teamwork</li>
-<li>Communication</li>
-<li>Strategic Thinking</li>
-<li>Problem Solving</li>
-<li>Adaptability</li>
-</ul>
+<div class="skill-content">
+
+<p>
+Gaming has helped me develop teamwork, communication, strategic thinking, adaptability, and problem-solving while enjoying different genres and online communities.
+</p>
+
 </div>
 
-<div class="card">
-<h3>Styling Skills</h3>
-<ul>
-<li>Fashion Coordination</li>
-<li>Color Matching</li>
-<li>Attention to Detail</li>
-<li>Creativity</li>
-<li>Trend Awareness</li>
-</ul>
 </div>
 
-<div class="card">
-<h3>Editing Skills</h3>
-<ul>
-<li>Photo Editing</li>
-<li>Video Editing</li>
-<li>Thumbnail Design</li>
-<li>Graphic Design Basics</li>
-<li>Time Management</li>
-</ul>
+<div class="skill-card">
+
+<div class="skill-header">
+<span>👕 Styling</span>
+<span>+</span>
+</div>
+
+<div class="skill-content">
+
+<p>
+I enjoy matching colors, coordinating outfits, and creating clean, simple styles that express personality and confidence while keeping up with current fashion trends.
+</p>
+
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-header">
+<span>🎬 Editing</span>
+<span>+</span>
+</div>
+
+<div class="skill-content">
+
+<p>
+I create photo edits, gaming videos, thumbnails, and social media content using editing software. I focus on producing clean, engaging, and visually appealing designs.
+</p>
+
+</div>
+
 </div>
 
 </div>
@@ -290,22 +381,62 @@ Editing photos and videos, creating thumbnails, and producing visually appealing
 
 <h2 class="title">Contact</h2>
 
-<div class="card">
+<div class="contact-grid">
 
-<p><b>Name:</b> Your Name</p>
-<p><b>School:</b> Your School</p>
-<p><b>Email:</b> yourname@email.com</p>
-<p><b>Phone:</b> +63 912 345 6789</p>
+<div class="contact-card">
+<h4>👤 Name</h4>
+<p>Your Name</p>
+</div>
+
+<div class="contact-card">
+<h4>🏫 School</h4>
+<p>Your School</p>
+</div>
+
+<div class="contact-card">
+<h4>📧 Email</h4>
+<p>your@email.com</p>
+</div>
+
+<div class="contact-card">
+<h4>📱 Phone</h4>
+<p>+63 912 345 6789</p>
+</div>
 
 </div>
 
 </section>
-
 <footer>
 
-© 2026 Your Name | Portfolio
+© 2026 Your Name | Creative Portfolio
 
 </footer>
+
+<script>
+
+const cards=document.querySelectorAll(".skill-card");
+
+cards.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+if(card.classList.contains("active")){
+
+card.classList.remove("active");
+
+}else{
+
+cards.forEach(c=>c.classList.remove("active"));
+
+card.classList.add("active");
+
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
