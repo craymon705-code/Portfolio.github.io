@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Name | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f6f9;
+color:#333;
+}
+
+nav{
+background:#4F46E5;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+background:#6366F1;
+color:white;
+}
+
+header img{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+margin-bottom:20px;
+}
+
+header h1{
+font-size:42px;
+}
+
+header h3{
+font-weight:400;
+margin:10px 0 20px;
+}
+
+header p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+section{
+padding:60px 10%;
+}
+
+.title{
+text-align:center;
+margin-bottom:30px;
+font-size:34px;
+color:#4F46E5;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 5px 12px rgba(0,0,0,.1);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:1.8;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#4F46E5;
+color:white;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+header h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Portfolio</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#specialties">Specialties</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<header>
+
+<img src="picture.png" alt="Profile Picture">
+
+<h1>Your Name</h1>
+
+<h3>Photographer • Gamer • Stylist • Editor</h3>
+
+<p>
+Welcome to my portfolio! I enjoy expressing creativity through photography, gaming, styling, and digital editing. I am always eager to learn new skills and improve my work.
+</p>
+
+</header>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+
+Hello! I'm <b>Your Name</b>, a Grade 12 student from <b>Your School</b>. I enjoy exploring creative fields that allow me to express ideas through photography, gaming, styling, and editing. I value creativity, teamwork, and continuous learning, and I strive to improve my skills through practice and experience.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="specialties">
+
+<h2 class="title">Specialties</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📷 Photographer</h3>
+
+<p>
+Capturing portraits, events, and creative moments with attention to lighting, composition, and storytelling.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎮 Gaming</h3>
+
+<p>
+Passionate about gaming, teamwork, strategy, and exploring different genres while continuously improving skills.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>👕 Styling</h3>
+
+<p>
+Creating stylish outfit combinations with attention to color coordination, fashion trends, and personal expression.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎬 Editing</h3>
+
+<p>
+Editing photos and videos, creating thumbnails, and producing visually appealing digital content.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Photography Skills</h3>
+<ul>
+<li>Photo Composition</li>
+<li>Camera Handling</li>
+<li>Lighting Techniques</li>
+<li>Portrait Photography</li>
+<li>Creativity</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Gaming Skills</h3>
+<ul>
+<li>Teamwork</li>
+<li>Communication</li>
+<li>Strategic Thinking</li>
+<li>Problem Solving</li>
+<li>Adaptability</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Styling Skills</h3>
+<ul>
+<li>Fashion Coordination</li>
+<li>Color Matching</li>
+<li>Attention to Detail</li>
+<li>Creativity</li>
+<li>Trend Awareness</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Editing Skills</h3>
+<ul>
+<li>Photo Editing</li>
+<li>Video Editing</li>
+<li>Thumbnail Design</li>
+<li>Graphic Design Basics</li>
+<li>Time Management</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="card">
+
+<p><b>Name:</b> Your Name</p>
+<p><b>School:</b> Your School</p>
+<p><b>Email:</b> yourname@email.com</p>
+<p><b>Phone:</b> +63 912 345 6789</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Your Name | Portfolio
+
+</footer>
+
+</body>
+</html>
